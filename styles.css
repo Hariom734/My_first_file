@@ -1,0 +1,73 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container styles */
+.home-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 0.8s ease-out;
+}
+
+/* Heading styles */
+.home-heading {
+    font-size: 2.5em;
+    color: #ff357f;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(255, 53, 127, 0.5);
+}
+
+/* Description styles */
+.home-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Button container styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button styles */
+.home-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(90deg, #ff357f, #ff7eb3);
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(255, 53, 127, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 53, 127, 0.5);
+}
+
+/* Zoom animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
