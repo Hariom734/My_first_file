@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .welcome-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            max-width: 450px;
+            margin: 100px auto;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            animation: slideDown 1.2s ease-out;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 15px 0 0;
+            animation: fadeInText 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animation-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: moveCircles 6s infinite ease-in-out;
+        }
+
+        @keyframes moveCircles {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(50px) rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animation-background">
+        <div class="circle" style="width: 100px; height: 100px; left: 10%; top: 20%;"></div>
+        <div class="circle" style="width: 150px; height: 150px; left: 70%; top: 40%;"></div>
+        <div class="circle" style="width: 80px; height: 80px; left: 40%; top: 70%;"></div>
+    </div>
+    <div class="welcome-container">
+        <h1>Welcome!</h1>
+        <p>You have successfully signed in.</p>
+    </div>
+</body>
+</html>
